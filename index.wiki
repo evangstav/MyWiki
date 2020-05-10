@@ -1,0 +1,30 @@
+= DTU =
+* [[Courses]]
+
+= Knowlegde Base =
+* [[Telco]]
+* [[Data Science|DataScience and MachineLearning]]
+* [[Programming]]
+* [[Math and Algorithms]]
+* [[Linux]]
+* [[NotebookDrivenDevelopmend]]
+* [[DataEngineering]]
+* [[VIM]]
+* [[Snippets]]
+
+== Tools ==
+* [[Docker]]
+* [[Kubernetes]]
+* [[Openstack]]
+
+== Databases ==
+* [[Influxdb]] 
+* [[MongoDB]]
+* [[SQL]]
+
+= [[Possible Internship]] =
+
+= [[Ideas]] =
+
+= [[Tasks]] =
+

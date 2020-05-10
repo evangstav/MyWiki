@@ -1,0 +1,24 @@
+== Enable Networking to the ouside ==
+
+1) In S1 create two subinterface veth5.77 and veth 5.88 vis
+{{{ bash
+ip link add link veth5 name veth5.77 type vlan id 77
+ip link add link veth5 name veth5.88 type vlan id 88
+ip link set veth5.77 master S1
+ip link set veth5.88 master S1
+ip link set veth5.77 up
+ip link set veth5.88 up
+}}}
+and then
+{{{
+bridge vlan add vid 88 pvid untagged dev veth5.88
+bridge vlan add vid 77 pvid untagged dev veth5.77
+}}}
+After that I couldn't find a way to enable connectivity to the Internet or connecting to the host.
+
+== TUN/TAP ==
+TUN/Tap Driver is pimarily designed to support netowork tunnels. Each TUN/TAP device hastwo ends. It creates a virtual network between the host and a user space application. A possibly use-case for TUN/TAP interfaces, is developing vpn tunnels.
+
+
+== Repeat scenario 2 using OvSwitch === Repeat scenario 2 using OvSwitch ==
+We create three network namespaces nsH1, nsH2. Create the virtual switch in the default namespace( Could not create at a seprate one ). Then I created two veth pairs veth11-12 and veth21-22 in the default namespace and move the other ends to H1 and H2 respectively. After giving the ip addresses and setting the ports for the peers in the original namespace in the virtual switch via ovs/vsctl add-port. So we enabled connectivity between these two hosts.

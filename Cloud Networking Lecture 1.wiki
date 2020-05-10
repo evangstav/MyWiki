@@ -1,0 +1,93 @@
+= Cloud Networking Lecture 1 =
+
+== Introduction ==
+* The cloud. *What and How.* -> Bunch of servers shared seamlessly
+* Exams *20 May*
+
+== Concept and Purspose ==
+
+1) What is the cloud
+2) what are its componets? Physical Non
+
+=== Why ===
+
+====1) Operators ====
+i) eq. homogenisity
+ii) Scalability
+iii) Service eterogenesity
+iv) $ Equipment:
+    a) Capex
+    b) Opex
+
+====2) Users ====
+i) Payper use 
+   
+   
+= Notes =
+
+East west traffic vs north side traffic.
+Flattenes Butterfly net -> better for AI?
+
+=== Take Home Notes ===
+==== 1) What is the cloud: ====
+    1) Remote servers that can share resources seamlessly
+    2) They are accesed through the Internet( or Wide Area Network )
+==== 2) Components: ====
+    1) Physical: Servers, switches
+    2) logical ?
+
+==== 3) Different Cloud Deployment models: ====
+    1) *Public Cloud*: 
+        * Cloud infrastructure belongs to an organisation making a business out of it (e.g. Amazon AWS)
+            * The Cloud Provider is responsible for:
+                a) the infrastructure
+                b) the control of data and operation within the Cloud
+            * Multitenancy - there are multiple users other than the provider
+        * Acces through internet via secured IP
+        * Reduced cost for the user (Usually sub + pay per use)
+    2) *Private Cloud*( Enterprised DC ):
+        * Implememnted by the IT department of the organisation. Managed in-house or service externalized
+        * Security Confidense (data always within the enterprize infrastructure)
+    3) *Community Cloud*:
+        * Closed group of tenants( e.g. government entities )
+    4) *Hybrid Cloud*:
+        * Composition of two or more clouds with different levels of interoperability
+
+==== 4) Cloud Service Models: ==== 
+    1) *Software as a Service (SaaS):*
+        * Provides application software *running and accesible* in the cloud.
+            * No local licensing or software installation
+            * E.g gmail, office 365 etc.
+    2) *Platform as a Service (PaaS):*
+        * Provides an endpoint in te cloud, where customer can run their application.
+        * _OS on the cloud_. The customer manages and installs his owns applications.
+    3) *Infrastructure as a Service (IaaS):*
+        * The customer has access to the resources of the undrlying Cloud infrastructure: VMs, vSwitches
+        * The customer can provision/manage them.
+    4) Other:
+        1) Content as a Service
+        2) Desktop as a Service
+        3) Anything as a Service
+==== 5) Why Fog ====
+Move closer to the edge to achieve lower delays and higher responce times for e.g. data processing in IoT and 5G. So the centralised computing power of the cloud neeeds to be decentralized to multiple acces points, which are closer to the final user.
+
+==== 6) What is Cloud Networking ====
+Cloud networking is datacenter networking. Specifically how servers (physical) or virtual machines communicate within the cloud infrastructure.
+    1) Data Center Network Topologies:
+        1) 3-tiered approach( ToR switch in each server rack, Aggregation Switch and Core Switch )
+            * Features:
+                i) High Badwidth for aggregation and core switch ports
+                ii) Ethernet lan technology limitations in aggregated capacity, Latensy(East-West traffic)
+                iii) low scalability (high capex and opex)
+        2) 3-tier with EoR Switch instead of ToR (better cooling).
+    2) Cloud DC Topologies:
+        4) Flat-DC networks(Spine +Leaves) -> No aggregation switches.
+            * scales horizontally.
+            * Reduced Uniform latency-delay distribution.
+            * Constant number of hops between leaves (better E-W traffic).
+        5) Many different variations.
+
+==== 7) Virtual Networking ==== 
+Baiscally taggin for each layer (encapsulation) , different that cloud networking which is networkig between virtual machines inside the cloud infrastructure.
+
+

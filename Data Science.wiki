@@ -1,0 +1,23 @@
+= Data Science =
+
+[[Sequential Data]]
+[[Mixture Models]]
+
+
+= Data Science Problems = 
+
+[[Anomaly Detection]]
+
+[[Natural Language Processing]]
+
+== Interesting Stuff to look into ==
+[[Reject Option in Classifiers]]
+
+[[Distributed Deep Learning]]
+
+== Frameworks ==
+* Hovorod : Distributed Deep Learning
+
+= [[Model-Based Machine Learning ]]=
+
+* [[Pyro]]

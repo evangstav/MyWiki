@@ -1,0 +1,1 @@
+Flag indicating to Docker that we are going to use the stdin of the container.

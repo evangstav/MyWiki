@@ -1,0 +1,62 @@
+= Core and Transport Networks Project =
+
+= Project in Security =
+
+I had to take a project, and I was pushed towards a project in security. Let's hope it turns out well. I eventualy chose to do a DDoS detection project-survey, given that it is interesting and i have experience with the anomaly detection problem from my work at UoA-IASA.
+
+= DDoS Detection =
+
+== Project Structure ==
+
+===Introduction===
+* Why is it important
+=== DDoS Theory ===
+    * What is a DoS
+    * What is a DDoS
+    * Main Types of DDoS
+=== [[Anomaly Detection|Anomaly Detection Theory]] ===
+
+    * What is anomaly detection: 
+      Define the anomaly detection problem in general and specifically in networks and DDoS attacks.
+    * Methods of Anomaly Detection
+        * Knowledge Based
+        * Supervised
+        * Unsupervised
+        * Semisupervised
+        Briefly Compare these 3 different approaches
+    * Anomaly Detection Techniques
+        There are many so briefly describe each one of them to write more lines
+
+=== Implementations ===
+Pick 3?? techinques already implemented and compare their implementations
+    * Are thet tried?
+    * In which part of the network they were deployed?
+    * Metrics:
+        * Accuracy
+        * Precision
+    * Perfomance:
+        * Heavy
+        * Can they be deployed on the edge or in the Core
+
+ === Conclusion ===
+Networks operator perspective:
+    * Is it important? Why?:
+        * Enterprises losing money
+        * Healthcare in Danger
+        * Network Operators to Blame
+    * Which Algorithms seem to be the best?:
+        * Propably an ensemple
+    * Defend on different levels namely destination and source
+
+== Notes ==
+
+=== Machine Learning Detection Based DDoS defence Models ===
+ 
+ Due to advance benefits of using machine learning approaches in classification, they are now considered the most prominent detection techinques used for DDoS detection.
+ 
+
+
+
+
+
+

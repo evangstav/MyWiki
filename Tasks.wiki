@@ -1,0 +1,14 @@
+*TODO*:
+- [o] Channel Charting:
+    - [X] TW and CT Math 
+    - [X] Semi Supervised Algorithm Description (Thursday)
+    - [X] Generate Appication Plots (Saturday) 
+    - [ ] Comment on Application (Sunday)
+    - [ ] Comment Results (Sunday)
+    - [ ] Write Conclusion (Sunday)
+    - [ ] Write Abstract
+- [ ] Energy Predictor:
+    - [ ] Transfer Hierarchical Model to numpyro
+    - [ ] Understand numpyro SVI
+
+*DONE*:

@@ -1,0 +1,4 @@
+=Model Based Machine Learning=
+
+= [[ModelBasedMLLecture1|Lecture 1 ]]=
+= [[ModelBasedMLLecture2|Lecture 2 ]]=

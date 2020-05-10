@@ -1,0 +1,36 @@
+= Propabilities Review =
+
+== Random Variable, Atom Event ==
+1) A random variable represents a set of values::
+     1) It can take values in a sample space
+     2) It can be discrete or continuous
+2) The values of the random variable we call them atoms::
+     1) A discrete probability distribution assigns probability to every atom in the sample space
+
+3)  Event is a subset of atoms
+
+== Joint Distribution ==
+A distribution over the configuration of all the ranodm variable in the ensemble.
+- Some Usefull properties::
+Union: 
+{{$
+p(X \union Y) = p(X) + p(Y) - p(X,Y)
+}}$
+
+Marginalization: 
+{{$
+p(X) = \sum_{Y} p(X,Y)
+}}$
+
+== Conditional Probability ==
+p(X|Y = y) = p(X,Y=y)/p(Y=y)
+
+== Bayes Theorem ==
+p(X|Y) = p(Y|X)p(x) / p(Y)
+
+== Independence ==
+Random variables are independent if knowing about *X* tell us nothing about *Y*
+{{$
+p(Y|X) = p(Y)
+}}$
+That means their joint distribution is p(X,Y) = P(X)*P(Y)

@@ -1,0 +1,15 @@
+= DTU Courses =
+
+== First Semester ==
+* [[Advanced Business Analytics]]
+* [[Social Graphs and Interactions]]
+* [[Deep Learning]]
+* [[Core and Trnasport Networks]]
+* [[Core and Transport Netowrks Project]]
+
+== Second Semester ==
+* [[Channel Charting]]
+* [[Cloud Networking]]
+* [[Distributed Systems]]
+* [[SynthesisProject]]
+* [[ModelBasedMachineLearning]]

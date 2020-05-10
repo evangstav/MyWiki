@@ -1,0 +1,6 @@
+== VIM CheatSheet ==
+
+=== Replace a word with yanked text ===
+1. yiw:     Yank inner word (copy word under cursor, say "first")
+2. viwp:    Select inner word (say "second") and replace it with "first"
+For more https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text  

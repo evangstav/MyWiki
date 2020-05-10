@@ -1,0 +1,16 @@
+= Deploy [[Influxdb]] and grafana as [[Docker]] Containers in Windows machine=
+# Get both images
+docker pull influxdb
+docker pull grafana/grafana
+
+# deploy both images
+docker run -d --name influxdb -p 8083:8083 -p 8086:8086 --expose 8090 influxdb
+docker run -d --name grafana 1948:3000 grafana/grafana
+
+# to connect to docker container
+docker exec -it influxdb influx
+
+
+# in case of vpn i got to restart docker
+
+

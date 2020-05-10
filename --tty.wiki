@@ -1,0 +1,1 @@
+Flag indicating to docker that a virtula terminal should be opened for the container.

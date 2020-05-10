@@ -1,0 +1,18 @@
+= Cloud Networking DTU Course =
+
+== [[Cloud Networking Lecture 1|Lecture 1 ]]==
+== [[Cloud Networking Lecture 2|Lecture 2]] ==
+== [[Cloud Networking Lecture 3|Lecture 3]] ==
+== [[Cloud Networking Lecture 4|Lecture 4]] ==
+== [[Cloud Networking Lecture 5|Lecture 5]] ==
+== [[Cloud Networking Lecture 6|Lecture 6]] ==
+== [[Openstack|Lecture 7]]/[[Lecture7Exercises|Exercises]]/[[Lecture7Exercises2|Exercises2]] ==
+== [[Lecture8]] ==
+== [[LastLecture]] ==
+
+
+= Ideas =
+[[https://www.researchgate.net/publication/319700786_Automated_Cloud_Provisioning_on_AWS_using_Deep_Reinforcement_LearningAutomated|Cloud Provisioning on AWS using Deep Reinforcement Learning]]
+
+
+

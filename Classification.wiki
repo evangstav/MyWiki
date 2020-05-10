@@ -1,0 +1,3 @@
+= Classification =
+
+Classification is used to learn a model (classifier) from a set of labeled data instances (training) and then, classify a test instance into one of the classes using the learned model (testing). 
