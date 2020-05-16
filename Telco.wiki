@@ -1,6 +1,9 @@
 = Machine Learning in Network and Services Management =
+
 /home/evangelos/workspace/ArticlesAndStaff/EugenBorcoci_Tutorial_SoftNet2019.pdf
+
 == Motivation ==
+
 Current state in network and services:
     * Increased Complexity -> (integration of Cloud/Edge computing and networking)
     * Driving forces -> IoT, smart cities, industry, governance, energy saving
@@ -19,6 +22,7 @@ Potential contributions:
 - RL for routing???
 
 == Potential Usecases ==
+
 - *Traffic Management and Control*
     - Traffic Prediction
     - Traffic classification

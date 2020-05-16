@@ -1,14 +1,26 @@
 *TODO*:
-- [o] Channel Charting:
-    - [X] TW and CT Math 
-    - [X] Semi Supervised Algorithm Description (Thursday)
-    - [X] Generate Appication Plots (Saturday) 
-    - [ ] Comment on Application (Sunday)
-    - [ ] Comment Results (Sunday)
-    - [ ] Write Conclusion (Sunday)
-    - [ ] Write Abstract
 - [ ] Energy Predictor:
     - [ ] Transfer Hierarchical Model to numpyro
     - [ ] Understand numpyro SVI
 
-*DONE*:
+- [ ] Model Based Ml Exams:
+    - [ ] Exact Inference
+    - [ ] Approximate Inference:
+        - [ ] MCMC methods
+        - [ ] Variational Methods
+
+
+
+- [.] Cloud Networking:
+    - [.] Linux Virtualization: Saturday
+        - [X] oVSwitch exercises
+        - [ ] understand vlan tagging
+        - [ ] Make an implementation of tuns and taps
+    - [X] Host Virtualization: Saturday
+    - [ ] Network Function Virtualization: Saturday
+    - [ ] Openstack: Sunday
+    - [ ] Docker: Sunday
+    - [ ] DockerSwarm: Sunday
+    - [ ] Kubernetes: Monday, Tueday
+    - [ ] Network Automation & Cloud Native Tuesday
+
