@@ -9,7 +9,7 @@
 
 ## Second Semester
 * [g](Channel Chartin.md)
-* [CloudNetworking](Cloud Networking.md)
+* [Cloud Networking](Cloud Networking.md)
 * [s](Distributed System.md)
 * [t](SynthesisProjec.md)
 * [g](ModelBasedMachineLearnin.md)
