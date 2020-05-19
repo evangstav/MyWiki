@@ -1,4 +1,4 @@
-= What are Linux Namespaces=
+# Linux Namespaces
 
 Kernel feature that allow for further partitioning of resources, so that it appears to the processes within the namespace, that they have their own isolated instance of the global resource. They are a form of lightweight virtualization (containers).
 

@@ -24,6 +24,9 @@ pause: docker pause name
 restart: docker unpause name
 stop: docker stop name
 remove: sudo docker rm name (with -v to delete volume)
+### Tips & Tricks
+- rm flag for deleting on exited state
+- docker rm -vf $(docker ps -a -a) deletes all exited containers
 
 ## Docker Registries
 A Docker registy is a repository for Docker Images. Docker Clients connect to registries to pull images to use, or to push images that they have built. Registries can be public or private. Two main puplic registries are Docker Hub and Docker Cloud. Docker is the default registy where Docker looks for images.
@@ -39,7 +42,7 @@ Docker allows different network configurations.
     - Ad-hoc bridges:
         - Separate networks within the host, isolated from each other
 
-- Closed Container:
+# - Closed Container:
     - only local traffic-> lo
     - no external connectivity->most secure
     - for applications that require no external connectivity
@@ -66,7 +69,7 @@ Docker allows different network configurations.
 - By default all containers are interconnected: there is a veth interface for each container to a bridge instantiated on the host.
 - For security reason docker does not add the containers network namespace to run time. We can add it by finding the Pid with *docker inpect name* and then on host running: sudo ln -sf /proc/<Pid>/ns/net "/var/run/netns/client" 
 # Exercises Tips
-[|Exercises](Lecture8Exercises.md)
+[Exercises](Lecture8Exercises.md)
 
 # Part 2
 

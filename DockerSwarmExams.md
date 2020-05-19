@@ -1,4 +1,5 @@
 # DockerSwarm
+
 ## What is the cattle approach for managing containers?
 In the cattle approach machines are treated anonymously.
 - They are all identical
@@ -12,6 +13,10 @@ In the cattle approach machines are treated anonymously.
 - Upgrading(Distributed system ,OS, apps)
 - Scaling
 ## Which Functionality does the scheduler provide in a container orchstrator?
+Scheduler is responsible for allocating applications into Nodes. In Docker Swarm 
+- "spread" strategy is the default: Tasks distributed to the nodes with the most resources.
+- It is possible to predefine the amount of HW resources per task(#cpus, memory)
+- It is possible to infuence schedulers decision by constraints (e.g. node.role==worker)
 ## What is Docker Swarm?
 Docker swarm is a container orchestratio tool. Applications required such coordination are termed *Services* in Docker. Service can be further split into *Tasks*(containers), which are allocated to specifi nodes within the cluster of hosts.
 ## What are its components?
