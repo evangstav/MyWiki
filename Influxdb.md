@@ -1,0 +1,6 @@
+# Influxdb
+## Components
+1) Database
+2) Measurement
+3) Fields (Numerical)
+4) Tags (strings)
