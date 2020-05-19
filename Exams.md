@@ -1,8 +1,8 @@
-# [Cloud](The Cloud.md)
-# [Datacenter Networking](Datacenter Networking.md)
-# [Virtualization in Linux](Virtualization Support in Linux.md)
+# [Cloud](Cloud.md)
+# [Datacenter Networking](DatacenterNetworking.md)
+# [Virtualization in Linux](VirtualizationSupportInLinux.md)
 # [Host Virtualization](Host_Virtualization.md)
-# [NFV](Network Function Virtualization.md)
+# [NFV](NetworkFunctionVirtualization.md)
 # Openstack
 # Docker
 # DockerSwarm
