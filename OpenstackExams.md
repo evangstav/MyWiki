@@ -25,7 +25,7 @@ It can be seen as an IaaS model.
     - Project or Tenant Nt: Virtual network created by a project or an administrator on behalf of a project, to *provide connectivity to resources within a project*.
     - Provider Nt: virtual network created by an admnistrator, to map a physical network. Typically to enable access to *resources outside the cloud*.
 2. By function:
-    - External Networks: They represent a view into a slice of the physical external network, accesible outside Openstack installation (public). 
+    - External Networks: They represent a view into a slice of the physical external network, accesible outside Openstack installation (public).
     - Internal Networks: They connect directly to the VMs. Provide direct connectivity (L2) to the VMs attached to them (private).
         * To connet different internal networks, routers (L3) are necessary.
         * To conect an internal network to an external network, a router (L3) is necessary.
@@ -36,6 +36,7 @@ It can be seen as an IaaS model.
     - GRE: Use Generic Routing Encapsulation(GRE) for communication between nodes. The KEY header is used to segregate networks.
     - VXLAN: Uses VXLAN Network Identifier to differentiate traffic among VXLAN networks. The VNI is used as header to encapsulate traffic over UDP, over L3 nets.
     - GENEVE
+
 ## How VMs are instantiated?
 1. User requests VM instance via HORIZON
 2. NOVA API -Idetnity service
@@ -50,6 +51,7 @@ It can be seen as an IaaS model.
     6. nova compute -> Hypervisor(target node)
         1. VM is created and configured
 5. The VM is visible through horizon
+
 ## How are entities (VMs) assigned to networks in Openstack?
 1. Nova attaches VM instances to virtual switches on the hosting compute node, via the VM's virtual network interface (VIF).
 2. VIF is configured as per Neutron port-info in Nuetron DB
@@ -65,3 +67,11 @@ It can be seen as an IaaS model.
 
 ## How does Openstack provide network isolation among different customers and entities?
 With Linux Bridge network isoaltion within compute node is topology based, while with OvSwitches is VLAN based.
+
+## More on OvS Networking on Openstack:
+3 bridges are used for creating network topologies:
+1. Intergation Bridge (br-int): central switch in the node connecting the cirtual devices. Sometime( when neutron Security groups and iptables firewall is used ), VMs are not directly connected to it, instead they use individual linux bridges, connected to br-int.
+2. Provider Bridge(br-ethX): provides connectivity to the physical network via physical interfaces. Each provider bridge is associated with a physical interface. They are connected to the br-int with a OvS patch cable.
+3. Tunnel Bridge (br-tun): it is used to connect GRE and VXLAN tunnel end points. SDN-flow rules are responsible for encpsulating tenant traffic traversing it.
+
+Each controller, network, or compute node is the OS setup has its own br-int and br-ethX bridges.

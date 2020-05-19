@@ -81,13 +81,13 @@ Nova attaches VMs to virtual switches, on the hosting compute node, via the VMs 
     * VxLAN
     * Linux Bridge.
 - In a LinuxB setup in OpenStack, every nt. uses its own bridge.
-- When configured as a trunk port, the provider netowrk Interface( Physical ) in the node can support multiple VLAN nts.
+- When configured as a trunk port, the provider network Interface( Physical ) in the node can support multiple VLAN nts.
 
-1) LinuxB Network Types: 
-    a) Local Network: no external connectivity. Only tap interfacsare attached to the bridge.
-    b) Flat Network: The node's physical interface must by connected to the bridge. If there are  multiple networks on the same node, each must be associated with a different physical interface. *Not scalable !*
-    c) VLAN Network: When configured as _subinterfaces_, the provider nt. Interface (physical) in the node can support multiple VLAN nts.
-    d) VXLAN Network: Based on linux vxlan interfaces, connected to the bridges.
+LinuxB Network Types: 
+    1. Local Network: no external connectivity. Only tap interfacsare attached to the bridge.
+    2. Flat Network: The node's physical interface must by connected to the bridge. If there are  multiple networks on the same node, each must be associated with a different physical interface. *Not scalable !*
+    3. VLAN Network: When configured as _subinterfaces_, the provider nt. Interface (physical) in the node can support multiple VLAN nts.
+    4. VXLAN Network: Based on linux vxlan interfaces, connected to the bridges.
     - !!NOTE on overlay networks: stacking headers can make the packet MTU exceed 1500B !
         * MTUs in VMs VIFs can be lowered (f.ex to 1450 B)
         * MTUs for the interfaces used for overlays (VLAN, VXLAN) and switc ports can be increased to a big value (3000B, 6000B etc.).
@@ -107,10 +107,10 @@ Nova attaches VMs to virtual switches, on the hosting compute node, via the VMs 
     * NOTE: Each controller, network or compute nodes in th OS setup has itsown br-int and br-eth bridges.
     * Tunnel Bridge (br-tun): it is used to connect GRE and VxLAN tunnel endpoints. SDN-based flow rules are responsible for encapsulating tenant traffic traversing it.
 
-1) OvS Netowrk types:
-    a) Local Network: no external connectivity. Only br-int. 
-    b) Flat Network: br-int and br-ethX. Flat networks are treated VLAN networks.
-    c) Overlay networks: VxLAN and GRE. Tunnel Bridges (br-tun) in tunnel endpoints.
+OvS Netowrk types:
+    1. Local Network: no external connectivity. Only br-int. 
+    2. Flat Network: br-int and br-ethX. Flat networks are treated VLAN networks.
+    3. Overlay networks: VxLAN and GRE. Tunnel Bridges (br-tun) in tunnel endpoints.
 
 #### Dynamic IP@ allocation
 - Neutron DHCP agent:
@@ -128,6 +128,7 @@ Nova attaches VMs to virtual switches, on the hosting compute node, via the VMs 
 - Current versions of OpenStack: Stand alone routers, termed "legacy routers" vs new proposals based on distributed virtual routers.
 - A router in OpenStack is usually connected to a single external provider nt and 1 or more project networks (NAT). 
 - Routing tables within the namespace dictate how traffic is routed, and iptables-rules dictate how traffic is translated (NAT), if necessary.
+ 
 # Distributed Virtual Routers
 - Only supported by OvS driver & agents.
 - Neutron distributes a VR across compute nodes, so that no particular node constitues a point of failluer.
