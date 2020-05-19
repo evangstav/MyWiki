@@ -1,7 +1,7 @@
 # What is NFV?
  NFV involves the implementation of network functions in software that can run on industry standard server hardware, and that canbe moved to, or instantiated in various locations in the network.
-## Network Function
-    A functional building block within a network infrastructure, which has well defined external interfaces and welldefined functional behaviour. Usually it is built around specific HW. Examples are Firewalls, Loadbalancers, switches...
+# Network Function(NF)
+A functional building block within a network infrastructure, which has well defined external interfaces and welldefined functional behaviour. Usually it is built around specific HW. Examples are Firewalls, Loadbalancers, switches...
 # What is a vNF?
 vNF is a NF but implemented in software, decoupled from specific hardware.
 Utilizing vNFs instead of traditional NFs, we can: 
