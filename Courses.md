@@ -8,7 +8,7 @@
 * [Core and Transport Networks Project](Core_and_Transport_Netowrks_Project.md)
 
 ## Second Semester
-* [Channel Charting](ChannelChartin.md)
+* [Channel Charting](ChannelCharting.md)
 * [CloudNetworking](CloudNetworking.md)
 * [Distributed Systems](DistributedSystems.md)
 * [Synthesis Project in Telecommunication](SynthesisProject.md)
