@@ -1,4 +1,4 @@
 # Natural Language Processing
 !TODO Definition
 
-## [s](Text Distance.md)
+## [Text Distances](TextDistances.md)

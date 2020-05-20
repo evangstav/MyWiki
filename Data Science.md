@@ -1,23 +1,17 @@
 # Data Science
 
-[a](Sequential Dat.md)
-[s](Mixture Model.md)
-
-
-= Data Science Problems = 
-
-[n](Anomaly Detectio.md)
-
-[g](Natural Language Processin.md)
+[Sequential Data](SequentialData.md)
+[MixtureModels](MixtureModels.md)
+[Anomaly Detection](Anomaly Detection.md)
+[Natural Language Processing](NLP.md)
 
 ## Interesting Stuff to look into
-[s](Reject Option in Classifier.md)
+[s](Reject Option in Classifiers.md)
 
-[g](Distributed Deep Learnin.md)
+[g](Distributed Deep Learning.md)
 
 ## Frameworks
 * Hovorod : Distributed Deep Learning
 
-= [ ](Model-Based Machine Learning.md)=
 
 * [o](Pyr.md)

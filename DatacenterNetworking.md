@@ -1,21 +1,21 @@
 # Datacenter Networking
-
 ## Traffic Distribution in Datacenters
 The bulk of traffic we need to manage in a datacenter comes from communication within the datacenter. A Cisco example mentions that 77% of the traffic is within the Datacenter, 14% Datacenter to user and 9 percent Datacenter to Datacenter. So like 3/4 of the traffic is internal. So most of the data traffic is _East-West_ compared to _North-South_
 
 ## Datacenter Architectures
-
+###Typical components
+Server(racks) , switches
 ### Basic 3-Tier Architecture
             Core-Switches
                /  \
               /    \
-      Agg.Switch  Agg.Switch 
-         /\           /\   
+      Agg.Switch  Agg.Switch
+         /\           /\
         /  \         /  \
-       /    \       /    \ 
+       /    \       /    \
       TORs  TORs   TORs  TORs
       Svs   Svs    Svs   Svs
-      
+
 In the basic 3-Tier Architecture, servers are placed in racks, with one or teo Top Of the Rack Switches (TORs). The interconnection between the TORs is established using several bigger aggregation switches often connected via SHort Reach (SR) optics. These swictches are in turn interconnected through few massive Core swiches, using Long Reach (LR) optics.
 
 This is expensive since large switches are costly to buy and maintain.
@@ -33,12 +33,27 @@ The main advantage of this design is that all switching components are identical
 Physical Network resources are divided up among multiple virtual networks. They enable multitenancy. That way each tenant as its own virtual network, isolated from the other tenants of the datacenter.
 Also connections between datacenters for same tenants.
 
+## Takewaways
+### DC topologies
+1. 3-tiered approach( ToR switch in each server rack, Aggregation Switch and Core Switch )
+    * Features:
+        1. High Badwidth for aggregation and core switch ports
+        2. Ethernet lan technology limitations in aggregated capacity, Latensy(East-West traffic)
+        3. low scalability (high capex and opex)
+2. 3-tier with EoR Switch instead of ToR (better cooling).
+### Cloud DC Topologies:
+1. Flat-DC networks(Spine +Leaves) -> No aggregation switches.
+            * scales horizontally.
+            * Reduced Uniform latency-delay distribution.
+            * Constant number of hops between leaves (better E-W traffic).
+2. Many different variations.
+
+
 
 ### Virtual Networking Technologies
-
 1) Vlan
     - Port based VLANs -> One virtual operates as multiple switches.
-    - VLANs can be spanning multiple switches via a "trunk" port.   
+    - VLANs can be spanning multiple switches via a "trunk" port.
       * Frames forwarded via trunk port can't be regural ethernet frames -> vlan headers -> 802.1q protocol
 2) Q-in-Q
     - 5 bit tag after ethernet header(between ethernet header and payload)
@@ -46,7 +61,7 @@ Also connections between datacenters for same tenants.
 4) MPLS
     1) Separate forwarding and Routing (forwarding table) Slow??
     3) FEC
-    4) Shim header 24 bits 
+    4) Shim header 24 bits
     5) Label Stacking
     6) Core LSR:
         1) Label Switching
@@ -62,7 +77,3 @@ Also connections between datacenters for same tenants.
        1) layer 2
        2) layer 3
    6) VxLAN MAC learning
-
-
-
-  

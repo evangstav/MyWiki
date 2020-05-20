@@ -2,8 +2,8 @@
 * [Cources](Courses.md)
 
 # Knowlegde Base
-* [o](Telc.md)
-* [|DataScience and MachineLearning](Data Science.md)
+* [Telecommunications](Telco.md)
+* [DataScience and MachineLearning](Data Science.md)
 * [g](Programmin.md)
 * [s](Math and Algorithm.md)
 * [x](Linu.md)
@@ -13,18 +13,16 @@
 * [s](Snippet.md)
 
 ## Tools
-* [r](Docke.md)
-* [s](Kubernete.md)
-* [k](Openstac.md)
+* [Docker](Docker.md)
+* [Kubernetes](Kubernetes.md)
+* [Openstack](Openstack.md)
 
 ## Databases
-* [b](Influxd.md) 
-* [B](MongoD.md)
-* [L](SQ.md)
+* [Influxdb](Influxdb.md)
+* [MongoDB](MongoDB.md)
+* [SQL](SQL.md)
 
-# [p](Possible Internshi.md)
 
-# [s](Idea.md)
+# [Ideas](Ideas.md)
 
-# [s](Task.md)
-
+# [Tasks](Tasks.md)

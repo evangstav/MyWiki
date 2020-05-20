@@ -10,6 +10,7 @@ Basic aims of network automation:
 * Simplify setup, operation and management-> simples architectures, standarization of configurations
 * Deterministic outcomes -> automation lead to predictable deterministic outcome which is not the case for manual configuration
 *  Agility -> Ability to deploy / modify redeploy a service faster
+
 ### Types of Network automation
 1. Device Provisioning: initial config and bootstraping
 2. Data Collection: monitoring
@@ -52,7 +53,7 @@ ansible targets -m command -a "ping dadsad"
 * Playbooks are written in YAML.
 * Modules can bu used to perform different kind of actions on the host.
 ## What is Cloud Native Design?
-It is an evolving definition. 
+It is an evolving definition.
 Includes flexibility, scale automation, architecture and design.
 It is basically a process of adoption of cloud methodologies:
 ## Which are its principles?

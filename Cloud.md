@@ -1,7 +1,11 @@
 ## What is the Cloud
+[1st Lecture]()
+
 "Cloud" refers to remote machines (servers) accessed throught the Internet. Enterprise DataCenters grew bigger and more costly, needing to be rellocated to a remote location. Huge costs like space, cooling and power drive corporations to move thei data center assets to the cloud.That relieves them from the hardware costs mentioned above, as well as maintaining and managing the infrastructure (networking, security).
 Local Datacenters have LAN limitations but QoS can be configured as necessary.
 Cloud Datacenters, have control over the internal networking, but access is through the Internet which is almost always "Best Effort".
+*Cloud ~ Sum of DCs*
+
 ## Cloud Components
 1) Physical and logical components:
     - Servers, PODs, Networking Components(Switches, Firewalls)
@@ -9,23 +13,23 @@ Cloud Datacenters, have control over the internal networking, but access is thro
 
 ## Cloud Deployment Models
 
-1. Private ( Evolution of the Enterprize DC ):
+1. *Private* ( Evolution of the Enterprize DC ):
     - single "user"
     - Implemented within the IT environment of the organization. Managed in-house or service externalized.
     - Security Confidence (data stays always within the organization)
 
-2. Public Cloud :
+2. *Public Cloud* :
     - Cloud Infrastucture belongs to an organization that makes a business out of it.
     - The Cloud Provider is responsible for the *infrastructure* and the *control of data and operations* within the Cloud.
     - Multitenancy
     - Access through the Internet via secured IP
     - Reduced costs for the user -usualy subscription and pay per use.
-3. Community Cloud:
+3. *Community Cloud*:
     - Reduced group of tenants(e.g. government entities).
 
-4. Hybrid Cloud:
+4. *Hybrid Cloud*:
     - Composition of 2 or more cloud with different levels of interoperability
-    
+
 
 | KPIs        | Private     | Community   | Public            | Hybrid         |
 |-------------|-------------|-------------|-------------------|----------------|
@@ -37,23 +41,28 @@ Cloud Datacenters, have control over the internal networking, but access is thro
 
 ## Cloud Service Models
 
-1) Software as a Service(SaaS):
+1) *Software as a Service(SaaS)*:
     * Provides application software running and accesible in the cloud.
         - No local lincensing or software installation
         - E.g. gmail, office365
-2) Platform as a Service(PaaS):
-    - Provides and endpoint in the cloud where customer can run their application.
+2) *Platform as a Service(PaaS)* :
+    - Provides and _endpoint_ in the cloud where customer can run their application.
     - _OS in the cloud_. The customer manages and installs his own applications.
-3) Infrastucture as a Service(IaaS):
+3) *Infrastucture as a Service(IaaS)* :
     - The customer has access to the resources of the underlying Cloud Infrastructure like VMs, VSwitchs, and he can provision/manage them.
-4) Other:
+4) *Other*:
     - Content as a Service
     - Desktop as a Service
     - Anything as a Service
 
+## Why Fog
+Move closer to the edge to achieve lower delays and higher responce times for e.g. data processing in IoT and 5G. So the centralised computing power of the cloud neeeds to be decentralized to multiple acces points, which are closer to the final user.
+
+
+
 ## What is a Virtual Network
 When we build multiple virtual overlays over a single physical network by encapsulation (tagging).
-- E.g. overlay tags, tenant tags, etc. 
+- E.g. overlay tags, tenant tags, etc.
 Virtual Networks allow for seamless multitenancy and traffic isolation.
 Multiple Standards like:
 - QinQ
@@ -63,4 +72,4 @@ Multiple Standards like:
 
 ## How are VNs practically implemented?
 
-By encapsulation
+By encapsulation/overlay

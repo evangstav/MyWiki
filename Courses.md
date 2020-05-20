@@ -1,15 +1,15 @@
 # DTU Courses
 
 ## First Semester
-* [s](Advanced Business Analytic.md)
-* [s](Social Graphs and Interaction.md)
-* [g](Deep Learnin.md)
-* [s](Core and Trnasport Network.md)
-* [t](Core and Transport Netowrks Projec.md)
+* [Advanced Busines Analytics](AdvancedBusinessAnalytics.md)
+* [Social Graphs and Interactions](SocialGraphsandInteraction.md)
+* [Deep Learning](Deep Learning.md)
+* [Core and Transport Networks](Core_and_Transport_Networks.md)
+* [Core and Transport Networks Project](Core_and_Transport_Netowrks_Project.md)
 
 ## Second Semester
-* [g](Channel Chartin.md)
+* [Channel Charting](ChannelChartin.md)
 * [CloudNetworking](CloudNetworking.md)
-* [s](Distributed Systems.md)
-* [t](SynthesisProjec.md)
-* [g](ModelBasedMachineLearnin.md)
+* [Distributed Systems](DistributedSystems.md)
+* [Synthesis Project in Telecommunication](SynthesisProject.md)
+* [Model Based Machine Learning](ModelBasedMachineLearning.md)

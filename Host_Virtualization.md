@@ -1,12 +1,18 @@
 # How do we define host virtualization?
-Technology enabling the simultaneous use of different operative systems and its applications on a single physical hardware, while providing the an abstract/isolated view of this hardware.
+Technology enabling the simultaneous use of *different operative systems* and its applications on a single physical hardware, while providing the an *abstract/isolated* view of this hardware.
 - Abstracts physical hardware resources to applications
 - Allows sharing of those resources among applications.
 # What is a virtual machine?
-Virtual machine is an emulation of a computer system. Virtual Machines are based on 
-on computer layer architecture, where OS is abstracting physical hardware resources to applications, by providing them specifi interfaces(Device Drivers). So it is a layered approach where OS serves as a layer on top of the hardware that provisions nad manages the use of the hardware by the application on top of it.
+Virtual machine is an emulation of a computer system. Virtual Machines are based on
+on computer layer architecture as reference model, where OS is abstracting physical hardware resources to applications, by providing them specifi interfaces(Device Drivers). So it is a layered approach where OS serves as a layer on top of the hardware that provisions nad manages the use of the hardware by the application on top of it.
+## Reference model
+| Application1 | Application2 | Application3 |
+| OS(drivers)  | OS           | OS(drives)   |
+| Hardware     | Hardware     | Hardware     |
+
+
 # Virtualization types
-1. Full Virtualization: 
+1. Full Virtualization:
     - Decouples Hardware and OS functionality. Examples Vbox, KVM/Qemu, VMware
 2. Para-virtualization / HW-assisted:
     - Some guest OS actions can be applied diretly to hardware( better perfomance )
@@ -53,7 +59,6 @@ For both hosts and VMs
 
 We can see that there is a lot of processing and cpu interupting involved, (overhead) that leads to a perfmance impact(delay, jitter, effective transmission rate, ...).
 ## Improving Perfomance
-
 1. Data Plane Development Kit (DPDK):
     - Allows access to US memory directly from NIC
     - Much Faster due to increased efficiency
@@ -61,7 +66,7 @@ We can see that there is a lot of processing and cpu interupting involved, (over
     - Ring buffer is used for transferring packets between the physical NIC and the application using DPDK.
     - Instead of CPU interruptions, a periodic packet poll mechanism is used.
     - Scalar packer processing (stream of sequential packets)
-     
+
 2. Single-root i/o virtualization (SR-IOV)
 - The host's NIC takes care of interruptions, making the host CPU unaware of them (it is not interrupted!).
 - The NIC itself creates virtual interfaces and presents the to entities above (OS, hypervisor, ...)
@@ -72,7 +77,7 @@ We can see that there is a lot of processing and cpu interupting involved, (over
 
 *So both SR-IOV and DPDK avoid Kernel participation in packet handling leading to faster paths.
 
-*SR-IOV vs DPDK*: 
+*SR-IOV vs DPDK*:
     - Nort South Traffic (from vm to outside):
         * SR-IOV(hypervisor not involved in trasmission): Hops from NIC to vNIC and back to NIC. (better)
         * DPDK in Hypervisor's switch: Hops form NIC to vSwitch(UserSpace) to vNIC to vSwitch and back to NIC.
@@ -94,24 +99,25 @@ We can see that there is a lot of processing and cpu interupting involved, (over
 # Networking Modes of Virtualbox
 1. (Network address Translation) NAT Adapter:
     - Default in Vbox
-    - Allows accesing the internet through Host, as if the guest is connected to a router. 
+    - Allows accesing the internet through Host, as if the guest is connected to a router.
     - Each Guest has its own NAT so they are not able to inter-communicate
     - Private Address
     - Not suitable for server unless port-forwarding is enabled.
     - Guest Invisible to the outside world.
 2. Host-Only Adapter:
-    - Allows communication between the HOst and VMs
+    - Allows communication between the Host and VMs
     - No connectivity to the outside world
     - New loopback interface on host
 3. Bridge Adapter:
     - Traffic is filtered at the host NIC and injeted to/from Guest.
         * this emulates a virtual switch operation (bridging)
     - This allows connecting a VM with an external device directly over the physical NIC of the host.
+    - A VM in bridged mode can be thought of as another machine in the LAN.
     - Servers as VMs
 4. Internal Network:
     - Network visible to VMs connected to it but not to the host
         * You cannot debug/capture traffic from host!
     - Isolated
 5. NAT Network:
-    - INternal Network with NAT capabilities
+    - Internal Network with NAT capabilities
     - Access to the outside world
