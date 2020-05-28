@@ -1,1 +1,1 @@
-[x](Tmu.md)
+[Tmux](Tmux.md)

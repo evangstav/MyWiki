@@ -23,11 +23,11 @@ To effectively manage and optimize new tech future systems must lean on the avai
 *Channel Fingerprinting*
 - Fully Supervised
 
-[g](*Manifold Learnin.md)*
+[g](*Manifold Learning.md)*
 
-[n](*Dimensionality Reductio.md)*
+[n](*Dimensionality Reduction.md)*
 
-[g](*Multidimensional scalin.md)*
+[g](*Multidimensional scaling.md)*
 
 [*](*Sammon's Mapping.md)
 

@@ -1,5 +1,3 @@
-[e](Clojur.md)
-[y](Nump.md)
+[Clojure](Clojure.md)
 
-[O](G.md)
-
+[Numpy](Numpy.md)

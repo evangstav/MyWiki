@@ -1,4 +1,4 @@
-= Deploy [r](Influxdb]] and grafana as [[Docke.md) Containers in Windows machine=
+# Deploy [Influxdb](Influxdb.md) and grafana as [Docker](Docker.md) Containers
 * Get both images
 docker pull influxdb
 docker pull grafana/grafana
@@ -12,5 +12,3 @@ docker exec -it influxdb influx
 
 
 * in case of vpn i got to restart docker
-
-

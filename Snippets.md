@@ -1,3 +1,3 @@
 # Snippets
 
-## [n](Pytho.md)
+## [n](Python.md)
